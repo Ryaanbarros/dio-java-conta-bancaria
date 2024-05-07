@@ -11,8 +11,10 @@ public class ContaTerminal {
         System.out.println("Agora digite o número da agência: ");
         String agencia = scanner.next();
 
+        scanner.nextLine(); //Adicionei esta linha para consumir a nova linha restante
+
         System.out.println("Digite o seu nome");
-        String nomeCliente = scanner.next();
+        String nomeCliente = scanner.nextLine();  //nextLine() lê a entrada até o fim da linha, por tanto nao vai cortar o nome.
         
         System.out.println("Digite o saldo para saque: ");
         double saldo = scanner.nextDouble();
